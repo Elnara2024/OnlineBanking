@@ -7,9 +7,9 @@ from . import views
 
 router = DefaultRouter()
 
-router.register('customer', views.CustomerViewSet)
+router.register('customer', views.CustomerViewSet, basename='customer')
 router.register('account', views.AccountViewSet, basename='account')
-
+router.register('action', views.ActionViewSet, basename='action')
 
 urlpatterns = [
     #path('customer-list/', views.CustomerList.as_view(), name='customer-list'),
